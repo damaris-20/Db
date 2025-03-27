@@ -1,0 +1,64 @@
+.report-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 60vw;
+    margin: 20px auto 0;
+}
+
+.report-container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.report-container hr {
+    margin: 10px 0;
+}
+
+.report table {
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.report table td {
+    text-align: left;
+    border: 1px solid black;
+}
+
+.table-data {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td span::after {
+    content: ' Kshs';
+}
+.print {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 150px;
+}
+
+@media print {
+    .report-container {
+        max-width: 80vw;
+    }
+    
+    .print {
+        visibility: hidden;
+    }
+
+    .intro-section {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    header nav {
+        visibility: hidden;
+    }
+}
